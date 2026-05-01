@@ -1,0 +1,108 @@
+name: Release Installer
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  build-installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download ZoomIt v11.0 from Sysinternals Live
+        shell: pwsh
+        run: |
+          $url = 'https://live.sysinternals.com/ZoomIt64.exe'
+          $out = "$env:GITHUB_WORKSPACE\ZoomIt64.exe"
+          [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+          Invoke-WebRequest -Uri $url -OutFile $out -UseBasicParsing
+          Get-Item $out | Format-Table Name, Length
+
+      - name: Stage flat layout for IExpress
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path stage -Force | Out-Null
+          Copy-Item ZoomIt64.exe stage\
+          Copy-Item installer\install.ps1 stage\
+          Copy-Item installer\uninstall.ps1 stage\
+          Copy-Item installer\Install.bat stage\
+          Copy-Item about.html stage\
+          Copy-Item -Recurse screenshots stage\
+          # README plain text
+          $readme = "FLOW ZoomIt — see https://github.com/${env:GITHUB_REPOSITORY}"
+          Set-Content -Path stage\README.txt -Value $readme -Encoding UTF8
+
+      - name: Build self-extracting installer (IExpress)
+        shell: pwsh
+        run: |
+          $sed = @"
+          [Version]
+          Class=IEXPRESS
+          SEDVersion=3
+          [Options]
+          PackagePurpose=InstallApp
+          ShowInstallProgramWindow=1
+          HideExtractAnimation=1
+          UseLongFileName=1
+          InsideCompressed=0
+          CAB_FixedSize=0
+          CAB_ResvCodeSigning=0
+          RebootMode=N
+          TargetName=$env:GITHUB_WORKSPACE\FLOW-ZoomIt-Setup.exe
+          FriendlyName=FLOW ZoomIt Installer
+          AppLaunched=cmd /c Install.bat
+          PostInstallCmd=<None>
+          SourceFiles=SourceFiles
+          [Strings]
+          FILE0=Install.bat
+          FILE1=ZoomIt64.exe
+          FILE2=install.ps1
+          FILE3=uninstall.ps1
+          FILE4=README.txt
+          FILE5=about.html
+          [SourceFiles]
+          SourceFiles0=$env:GITHUB_WORKSPACE\stage\
+          [SourceFiles0]
+          %FILE0%=
+          %FILE1%=
+          %FILE2%=
+          %FILE3%=
+          %FILE4%=
+          %FILE5%=
+          "@
+          Set-Content -Path build.sed -Value $sed -Encoding ASCII
+          iexpress.exe /N /Q build.sed
+          Get-Item FLOW-ZoomIt-Setup.exe | Format-Table Name, Length
+
+      - name: Create release zip (folder package)
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path FLOW-ZoomIt-Setup\payload -Force | Out-Null
+          Copy-Item ZoomIt64.exe FLOW-ZoomIt-Setup\payload\
+          Copy-Item about.html FLOW-ZoomIt-Setup\payload\
+          Copy-Item -Recurse screenshots FLOW-ZoomIt-Setup\payload\
+          Copy-Item installer\Install.bat FLOW-ZoomIt-Setup\
+          Copy-Item installer\Uninstall.bat FLOW-ZoomIt-Setup\
+          New-Item -ItemType Directory -Path FLOW-ZoomIt-Setup\scripts -Force | Out-Null
+          Copy-Item installer\install.ps1 FLOW-ZoomIt-Setup\scripts\
+          Copy-Item installer\uninstall.ps1 FLOW-ZoomIt-Setup\scripts\
+          Compress-Archive -Path FLOW-ZoomIt-Setup -DestinationPath FLOW-ZoomIt-Setup.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: flow-zoomit-setup
+          path: |
+            FLOW-ZoomIt-Setup.exe
+            FLOW-ZoomIt-Setup.zip
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            FLOW-ZoomIt-Setup.exe
+            FLOW-ZoomIt-Setup.zip
+          generate_release_notes: true

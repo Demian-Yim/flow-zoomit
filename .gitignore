@@ -1,0 +1,25 @@
+# Build artifacts
+*.exe
+*.zip
+!installer/Install*.bat
+!installer/Uninstall*.bat
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Local secrets / tokens
+*.token
+*.secret
+.env
+.env.*
+
+# Build temp
+*.sed
+iexpress-flat/

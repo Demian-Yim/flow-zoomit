@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLOW ZoomIt — About / 정보</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --soft: #555;
+    --line: #e5e5e5;
+    --accent: #2b6cb0;
+    --accent-soft: #ebf4ff;
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --warm: #f5f3ee;
+    --en-color: #6b7280;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    padding: 60px 20px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 16px;
+    padding: 56px 56px 44px;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+  }
+  .lang-toggle {
+    position: sticky;
+    top: 12px;
+    text-align: right;
+    margin-bottom: 8px;
+    z-index: 10;
+  }
+  .lang-toggle button {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 6px;
+  }
+  .lang-toggle button.active { background: var(--accent); color: white; }
+
+  .brand {
+    font-family: 'Nanum Pen Script', '나눔바른펜', cursive;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+  .sub { color: var(--soft); font-size: 14px; margin-bottom: 36px; }
+  .en { color: var(--en-color); font-size: 13px; font-style: italic; display: block; margin-top: 4px; }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 36px 0 14px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  p, li { color: var(--ink); font-size: 15px; }
+  ul { margin: 8px 0 0 20px; }
+  ul li { margin-bottom: 6px; }
+
+  .why {
+    background: var(--warm);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 12px;
+    font-size: 15px;
+  }
+
+  figure {
+    margin: 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  figure img { width: 100%; display: block; }
+  figcaption {
+    padding: 12px 16px;
+    background: #f8fafc;
+    color: var(--soft);
+    font-size: 13px;
+    border-top: 1px solid var(--line);
+  }
+
+  .feat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .feat {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    background: var(--card);
+    transition: border-color .15s;
+  }
+  .feat:hover { border-color: var(--accent); }
+  .feat .row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .feat .row .key {
+    font-family: ui-monospace, 'Consolas', monospace;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+  .feat .row .name { font-weight: 700; font-size: 15px; }
+  .feat p { color: var(--soft); font-size: 13.5px; line-height: 1.55; }
+  .feat .en-line { color: var(--en-color); font-size: 12.5px; font-style: italic; margin-top: 4px; line-height: 1.5; }
+
+  .keys, .specs {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 6px 16px;
+    margin-top: 12px;
+    font-size: 14.5px;
+  }
+  .keys b, .specs b { padding: 2px 8px; border-radius: 4px; font-weight: 600; align-self: start; }
+  .keys b {
+    font-family: ui-monospace, 'Consolas', monospace;
+    background: var(--accent-soft);
+    color: var(--accent);
+    text-align: center;
+  }
+  .specs b { color: var(--soft); font-weight: 500; background: transparent; padding: 0; }
+
+  footer {
+    margin-top: 52px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--soft);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  footer .name { color: var(--ink); font-weight: 700; font-size: 16px; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .copyright { margin-top: 12px; font-size: 12.5px; color: #999; }
+  .pill {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  body.en-only .ko { display: none; }
+  body.ko-only .en { display: none; }
+  body.ko-only .en-line { display: none; }
+
+  @media (max-width: 720px) {
+    body { padding: 24px 12px; }
+    .wrap { padding: 32px 24px; }
+    .feat-grid { grid-template-columns: 1fr; }
+    .keys, .specs { grid-template-columns: 100px 1fr; }
+  }
+</style>
+</head>
+<body class="bilingual">
+
+<div class="wrap">
+
+  <div class="lang-toggle">
+    <button id="bothBtn" class="active" onclick="setLang('bilingual')">한 + EN</button>
+    <button id="koBtn"   onclick="setLang('ko-only')">한국어만</button>
+    <button id="enBtn"   onclick="setLang('en-only')">English only</button>
+  </div>
+
+  <div class="brand">FLOW: AX 디자인연구소</div>
+  <h1>FLOW ZoomIt <span class="pill">v1.0</span></h1>
+  <div class="sub">
+    <span class="ko">한국어 강의·워크숍·코칭을 위한 화면 강조 + 캡처 + 녹화 종합 도구</span>
+    <span class="en">A Korean-friendly distribution of Microsoft Sysinternals ZoomIt v11.0 — bundled with handwriting fonts, larger arrows, and bilingual UX for trainers, coaches, and presenters.</span>
+  </div>
+
+  <figure>
+    <img src="screenshots/05-combined-demo.png" alt="ZoomIt arrows + Korean text on slide">
+    <figcaption>
+      <span class="ko">Ctrl+2 그리기 모드에서 한글 텍스트 + 화살표 동시 사용 — 빨강 펜, 두께 15, 나눔바른펜 Bold 폰트.</span>
+      <span class="en">Draw mode (Ctrl+2): Korean handwriting text + arrows on a slide. Red ink, pen width 15, Nanum Barun Pen Bold font.</span>
+    </figcaption>
+  </figure>
+
+  <h2><span class="ko">왜 만들었나</span><span class="en">Why this exists</span></h2>
+  <p class="why">
+    <span class="ko">
+      Microsoft Sysinternals ZoomIt은 30년 다듬어진 검증된 화면 도구지만,
+      구버전(v4.52)은 한국어 텍스트 입력·렌더링이 불가능했습니다.
+      이를 우회하려 자체 IME를 가진 Electron 기반 ZoomIt-Pro를 5번 빌드했지만
+      transparent 윈도우와 한국어 IME의 비양립으로 모두 실패.
+      <br><br>
+      2026년 5월, ZoomIt v11.0이 한국어를 정상 지원함을 확인하고
+      <strong>"개발 대신, v11.0을 한국어 강의 환경에 맞게 패키징"</strong>하는 방향으로 전환.
+      이 설치 도구는 그 산출물입니다 — 본체 갱신 + 손글씨 폰트 + 화살표 시인성 + 자동 시작까지
+      한 번에 세팅됩니다.
+    </span>
+    <span class="en">
+      Microsoft Sysinternals ZoomIt is a battle-tested screen-annotation tool, but its older
+      v4.52 build could not render Korean characters. We tried five Electron-based "ZoomIt-Pro"
+      rewrites with custom IMEs — all failed due to transparent-window/Korean-IME incompatibility.
+      <br><br>
+      In May 2026 we verified that ZoomIt <strong>v11.0</strong> handles Korean correctly out of the
+      box, and pivoted from "rewrite" to <strong>"package v11.0 for Korean classroom use."</strong>
+      This installer is the result: it ships the v11.0 binary plus opinionated defaults
+      (handwriting font, larger arrowheads, autostart) so Korean trainers can install once and teach.
+    </span>
+  </p>
+
+  <h2><span class="ko">9가지 핵심 기능</span><span class="en">9 core features</span></h2>
+  <div class="feat-grid">
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+1</span><span class="name"><span class="ko">정적 줌</span><span class="en">Static Zoom</span></span></div>
+      <p><span class="ko">화면 일부 확대 정지 표시. 마우스휠로 배율 조절. 코드·UI 부분 강조.</span></p>
+      <p class="en-line">Freeze a zoomed-in region. Wheel adjusts magnification. Use to highlight code or UI details.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+2</span><span class="name"><span class="ko">그리기</span><span class="en">Draw</span></span></div>
+      <p><span class="ko">화면 위에 직접 펜·도형·텍스트 작성. T로 텍스트 모드, 한/영 전환으로 한글 입력.</span></p>
+      <p class="en-line">Annotate over the live screen. Press T for text mode; toggle Korean IME with 한/영 to type Hangul.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+3</span><span class="name"><span class="ko">휴식 타이머</span><span class="en">Break Timer</span></span></div>
+      <p><span class="ko">카운트다운 타이머. 워크숍 쉬는 시간·아이스브레이크에 활용.</span></p>
+      <p class="en-line">Full-screen countdown timer with custom sound and background — for breaks and icebreakers.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+4</span><span class="name"><span class="ko">라이브 줌</span><span class="en">Live Zoom</span></span></div>
+      <p><span class="ko">실시간 화면 확대. 줌 상태에서 마우스·키보드 그대로 사용 가능.</span></p>
+      <p class="en-line">Real-time magnification — keyboard and mouse remain interactive while zoomed.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+5</span><span class="name"><span class="ko">화면 녹화 ★</span><span class="en">Recording ★</span></span></div>
+      <p><span class="ko">MP4/GIF 녹화. 마이크 + 시스템 사운드 동시 캡처. 트리밍 대화상자 내장.</span></p>
+      <p class="en-line">MP4/GIF screen recording with mic + system audio. Built-in trim dialog.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+6</span><span class="name"><span class="ko">화면 캡처</span><span class="en">Snip</span></span></div>
+      <p><span class="ko">드래그 영역 스니핑 후 클립보드/파일 저장.</span></p>
+      <p class="en-line">Drag-region snip to clipboard or file. Quick screenshots for chat or docs.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+7</span><span class="name"><span class="ko">데모 타입 ★</span><span class="en">Demo Type ★</span></span></div>
+      <p><span class="ko">미리 작성한 텍스트를 자동 타이핑. 라이브 코딩·시연 시나리오 재생.</span></p>
+      <p class="en-line">Auto-type a saved text file at a chosen speed. Great for live-coding demos.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+8</span><span class="name"><span class="ko">파노라마 캡처 ★</span><span class="en">Panorama Snip ★</span></span></div>
+      <p><span class="ko">긴 스크롤 영역 자동 합성 캡처. 웹페이지 전체·긴 코드 한 장으로.</span></p>
+      <p class="en-line">Auto-stitch a long scrollable region into one image — full pages or long code in one shot.</p>
+    </div>
+
+    <div class="feat">
+      <div class="row"><span class="key">Ctrl+Shift+6</span><span class="name"><span class="ko">OCR 캡처 ★</span><span class="en">OCR Snip ★</span></span></div>
+      <p><span class="ko">캡처와 동시에 화면 텍스트 자동 인식 → 클립보드.</span></p>
+      <p class="en-line">Snip + auto-OCR. Recognized text lands in your clipboard, Korean and English supported.</p>
+    </div>
+
+  </div>
+
+  <h2><span class="ko">화살표가 더 잘 보이게</span><span class="en">Bigger, clearer arrows</span></h2>
+  <figure>
+    <img src="screenshots/03-draw-arrows.png" alt="ZoomIt arrows with enlarged heads">
+    <figcaption>
+      <span class="ko">PenWidth=15 적용으로 헤드 좌우 폭이 충분히 시인. Shift+드래그로 직선 + 화살표 동시 생성.</span>
+      <span class="en">PenWidth=15 makes arrowheads visibly wide. Shift+drag draws a straight line with auto arrowhead.</span>
+    </figcaption>
+  </figure>
+
+  <h2><span class="ko">한글 텍스트 자연스럽게</span><span class="en">Natural Korean text</span></h2>
+  <figure>
+    <img src="screenshots/04-korean-text.png" alt="Korean handwriting text on slide">
+    <figcaption>
+      <span class="ko">나눔바른펜 Bold — 손글씨 느낌으로 강의 분위기를 살림. Ctrl+2 → T → 클릭 → 한/영 → 입력.</span>
+      <span class="en">Nanum Barun Pen Bold gives a friendly handwriting tone. Workflow: Ctrl+2 → T → click → 한/영 → type.</span>
+    </figcaption>
+  </figure>
+
+  <h2><span class="ko">그리기 모드 세부 단축키</span><span class="en">Draw mode shortcuts</span></h2>
+  <div class="keys">
+    <b>R/G/B/Y/O/P</b><span><span class="ko">색상: 빨강 / 초록 / 파랑 / 노랑 / 주황 / 분홍</span><span class="en">Pen color: Red / Green / Blue / Yellow / Orange / Pink</span></span>
+    <b>Drag</b><span><span class="ko">자유 펜</span><span class="en">Free-pen stroke</span></span>
+    <b>Shift+Drag</b><span><span class="ko">직선 + 끝 화살표</span><span class="en">Straight line with arrowhead</span></span>
+    <b>Ctrl+Drag</b><span><span class="ko">사각형</span><span class="en">Rectangle</span></span>
+    <b>Tab+Drag</b><span><span class="ko">타원</span><span class="en">Ellipse</span></span>
+    <b>Wheel</b><span><span class="ko">펜 굵기 조절</span><span class="en">Adjust pen width</span></span>
+    <b>T</b><span><span class="ko">텍스트 모드</span><span class="en">Text input mode</span></span>
+    <b>Ctrl+Z</b><span><span class="ko">되돌리기</span><span class="en">Undo</span></span>
+    <b>ESC</b><span><span class="ko">그리기 종료</span><span class="en">Exit draw mode</span></span>
+  </div>
+
+  <h2><span class="ko">FLOW 기본 설정</span><span class="en">FLOW defaults</span></h2>
+  <div class="specs">
+    <b><span class="ko">본체</span><span class="en">Engine</span></b><span>ZoomIt v11.0 (Microsoft Sysinternals · 2026-03)</span>
+    <b><span class="ko">설치 위치</span><span class="en">Install path</span></b><span>%LOCALAPPDATA%\FLOW-ZoomIt\</span>
+    <b><span class="ko">기본 폰트</span><span class="en">Default font</span></b><span>나눔바른펜 Bold (Nanum Barun Pen Bold) — Hangul charset, antialiased</span>
+    <b><span class="ko">펜 두께</span><span class="en">Pen width</span></b><span>15 <span class="ko">(화살표 헤드 좌우 시인성 우선)</span><span class="en">(arrowhead width tuned for visibility)</span></span>
+    <b><span class="ko">펜 색상</span><span class="en">Pen color</span></b><span><span class="ko">빨강 (Options 에서 변경)</span><span class="en">Red (change in Options)</span></span>
+    <b><span class="ko">자동 실행</span><span class="en">Autostart</span></b><span><span class="ko">Windows 시작프로그램 등록</span><span class="en">Registered in Windows Startup</span></span>
+    <b><span class="ko">관리자 권한</span><span class="en">Admin rights</span></b><span><span class="ko">불필요</span><span class="en">Not required (per-user install)</span></span>
+  </div>
+
+  <h2><span class="ko">설치 후 자산 위치</span><span class="en">What gets installed where</span></h2>
+  <figure>
+    <img src="screenshots/02-install-folder.png" alt="Installation layout">
+    <figcaption>
+      <span class="ko">관리자 권한 없이 사용자 영역에만 설치되며, 시작 메뉴·바탕화면·시작프로그램에 바로가기 자동 생성.</span>
+      <span class="en">Per-user install — no admin needed. Shortcuts auto-created in Start Menu, Desktop, and Startup.</span>
+    </figcaption>
+  </figure>
+
+  <h2><span class="ko">고급 옵션 위치</span><span class="en">Where to find advanced options</span></h2>
+  <p style="margin-top:8px;">
+    <span class="ko">트레이 아이콘 우클릭 → <strong>Options...</strong> 에서 다음 항목 조정:</span>
+    <span class="en">Right-click the tray icon → <strong>Options...</strong>:</span>
+  </p>
+  <ul>
+    <li><strong>Type</strong> — <span class="ko">폰트, 펜 색상, 펜 두께, 텍스트 폰트 크기</span><span class="en"> font, pen color, pen width, text size</span></li>
+    <li><strong>Record</strong> — <span class="ko">MP4/GIF, 스케일링, 마이크/시스템 오디오</span><span class="en"> MP4/GIF, scaling, mic / system audio</span></li>
+    <li><strong>Snip</strong> — <span class="ko">스크린샷 저장 경로, OCR 언어</span><span class="en"> screenshot save path, OCR language</span></li>
+    <li><strong>Break</strong> — <span class="ko">타이머 사운드·배경·위치·투명도·종료 후 잠금</span><span class="en"> timer sound, background, position, opacity, lock-on-end</span></li>
+    <li><strong>Demo Type</strong> — <span class="ko">자동 타이핑 텍스트, 속도, user-driven 모드</span><span class="en"> auto-type file, speed, user-driven mode</span></li>
+  </ul>
+
+  <h2><span class="ko">한글 입력 시 주의</span><span class="en">Korean IME caveats</span></h2>
+  <ul>
+    <li><span class="ko">Windows IME 후보창이 좌측 상단에 뜰 수 있음 — ZoomIt이 IME 위치를 캔버스 커서로 고정하지 못하는 한계.</span><span class="en">The Windows IME composition window may appear in the top-left because ZoomIt does not anchor the IME to the cursor.</span></li>
+    <li><span class="ko">한글 입력 자체에는 영향 없음. 거슬리시면 설정 → 시간 및 언어 → 한국어 → Microsoft IME → 옵션 → 모양 에서 후보창 숨김 가능.</span><span class="en">Input itself works fine. To hide the floating window: Settings → Time & Language → Korean → Microsoft IME → Options → Appearance.</span></li>
+  </ul>
+
+  <h2><span class="ko">제거</span><span class="en">Uninstall</span></h2>
+  <p>
+    <code>%LOCALAPPDATA%\FLOW-ZoomIt\Uninstall.bat</code>
+    <span class="ko"> 실행. 설치 파일·바로가기·자동 실행 모두 제거. 단축키·폰트 레지스트리는 유지/삭제 선택 가능.</span>
+    <span class="en"> — removes files, shortcuts, and autostart. Registry settings (hotkeys, font) are kept by default; you can choose to wipe them.</span>
+  </p>
+
+  <h2><span class="ko">라이선스</span><span class="en">License</span></h2>
+  <ul>
+    <li><strong>ZoomIt</strong> — <span class="ko">Microsoft Sysinternals Software License</span><span class="en"> Microsoft Sysinternals Software License</span></li>
+    <li><strong>Nanum Fonts</strong> — <span class="ko">NAVER 무료 사용 라이선스</span><span class="en"> NAVER free-use license</span></li>
+    <li><strong>FLOW packaging scripts</strong> — <span class="ko">MIT License (FLOW: AX 디자인연구소)</span><span class="en"> MIT License (FLOW: AX Design Lab)</span></li>
+  </ul>
+
+  <footer>
+    <div class="name">FLOW: AX 디자인연구소 — FLOW: AX Design Lab</div>
+    <div><span class="ko">by AI 코디네이터 임정훈 소장</span><span class="en">by Junghoon Lim, Director · AI Coordinator</span></div>
+    <div>🌐 <a href="https://flowdesign.ai.kr" target="_blank">https://flowdesign.ai.kr</a></div>
+    <div class="copyright">© 2026 FLOW: AX 디자인연구소 · FLOW: AX Design Lab — All Rights Reserved.</div>
+  </footer>
+
+</div>
+
+<script>
+function setLang(mode) {
+  document.body.className = mode;
+  ['both','ko','en'].forEach(k => {
+    document.getElementById(k+'Btn').classList.remove('active');
+  });
+  if (mode === 'bilingual') document.getElementById('bothBtn').classList.add('active');
+  if (mode === 'ko-only')   document.getElementById('koBtn').classList.add('active');
+  if (mode === 'en-only')   document.getElementById('enBtn').classList.add('active');
+  try { localStorage.setItem('flow-lang', mode); } catch(e){}
+}
+const saved = (function(){ try { return localStorage.getItem('flow-lang'); } catch(e){ return null; } })();
+if (saved) setLang(saved);
+</script>
+</body>
+</html>
