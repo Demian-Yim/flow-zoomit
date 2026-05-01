@@ -103,6 +103,20 @@ Copy-Item -Path $SourceExe -Destination $ExePath -Force
 $AboutDest = Join-Path $InstallDir 'about.html'
 if ($SourceAbout) {
     Copy-Item -Path $SourceAbout -Destination $AboutDest -Force
+
+    # screenshots 폴더도 함께 복사 (about.html 에서 참조)
+    $shotsCandidates = @(
+        Join-Path (Split-Path -Parent (Split-Path -Parent $SourceAbout)) 'payload\screenshots'
+        Join-Path (Split-Path -Parent $SourceAbout) 'screenshots'
+        Join-Path $ScriptDir 'screenshots'
+        Join-Path (Split-Path -Parent $ScriptDir) 'screenshots'
+    )
+    $shotsSrc = $shotsCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+    if ($shotsSrc) {
+        $shotsDst = Join-Path $InstallDir 'screenshots'
+        if (Test-Path $shotsDst) { Remove-Item $shotsDst -Recurse -Force }
+        Copy-Item -Path $shotsSrc -Destination $InstallDir -Recurse -Force
+    }
 }
 Write-Host '      완료' -ForegroundColor Green
 
