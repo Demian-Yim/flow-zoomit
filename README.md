@@ -6,7 +6,7 @@ colorTo: indigo
 sdk: static
 pinned: false
 license: mit
-short_description: A Korean-friendly distribution of Microsoft Sysinternals ZoomIt v11.0 — handwriting fonts, larger arrows, bilingual UX.
+short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 ---
 
 # FLOW ZoomIt
