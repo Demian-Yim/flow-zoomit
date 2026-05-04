@@ -13,7 +13,10 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 
 > A Korean-friendly distribution of Microsoft Sysinternals **ZoomIt v11.0** for Windows — **Korean text input now works**, bundled with **handwriting fonts**, **a full pen-color palette (red · green · blue · yellow · orange · pink…)**, larger arrowheads, autostart, and bilingual UX. Built for Korean trainers, coaches, and presenters.
 >
-> 한국어 강의·워크숍·코칭을 위한 Microsoft Sysinternals **ZoomIt v11.0** 배포판. **이젠 한글로 자유롭게 표현이 가능**하며, **손글씨 폰트**·**원하는 색상(빨강·초록·파랑·노랑·주황·핑크 등)**·강조된 화살표·자동 시작·양국어 UX를 한 번에.
+> 한국어 강의·워크숍·코칭을 위한 Microsoft Sysinternals **ZoomIt v11.0** 배포판. 
+**이젠 한글로 자유롭게 표현이 가능**하며, 
+**손글씨 폰트**·**원하는 색상(빨강·초록·파랑·노랑·주황·핑크 등)**·
+강조된 화살표·자동 시작·양국어 UX를 한 번에.
 
 ![FLOW ZoomIt — handwriting font + magenta annotation on a coding screen](screenshots/01-hero-handwriting-pink.png)
 
