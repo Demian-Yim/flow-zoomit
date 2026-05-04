@@ -11,13 +11,25 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 
 # FLOW ZoomIt
 
-> A Korean-friendly distribution of Microsoft Sysinternals **ZoomIt v11.0** for Windows — bundled with handwriting fonts, larger arrowheads, autostart, and bilingual UX. Built for Korean trainers, coaches, and presenters.
+> A Korean-friendly distribution of Microsoft Sysinternals **ZoomIt v11.0** for Windows — **Korean text input now works**, bundled with **handwriting fonts**, **a full pen-color palette (red · green · blue · yellow · orange · pink…)**, larger arrowheads, autostart, and bilingual UX. Built for Korean trainers, coaches, and presenters.
 >
-> 한국어 강의·워크숍·코칭을 위한 Microsoft Sysinternals **ZoomIt v11.0** 배포판. 손글씨 폰트·강조된 화살표·자동 시작·양국어 UX를 한 번에.
+> 한국어 강의·워크숍·코칭을 위한 Microsoft Sysinternals **ZoomIt v11.0** 배포판. **이젠 한글로 자유롭게 표현이 가능**하며, **손글씨 폰트**·**원하는 색상(빨강·초록·파랑·노랑·주황·핑크 등)**·강조된 화살표·자동 시작·양국어 UX를 한 번에.
 
-![FLOW ZoomIt — arrows + Korean text on slide](screenshots/05-combined-demo.png)
+![FLOW ZoomIt — handwriting font + magenta annotation on a coding screen](screenshots/01-hero-handwriting-pink.png)
 
 🌐 Live demo · 라이브 데모: <https://flowdesign.ai.kr>
+
+---
+
+## 🎨 What's new in v11 / v11.0 의 차이
+
+| | v4.52 (old) | **v11.0 (FLOW ZoomIt)** |
+|---|---|---|
+| 한글 텍스트 입력 / Korean text | ❌ Broken | ✅ **Native** — 한/영 토글로 즉시 입력 |
+| 폰트 / Font | 시스템 기본만 / system default only | ✅ **자유 선택** — 나눔바른펜 Bold 기본, Options 에서 변경 |
+| 펜 색상 / Pen color | 6색 가능하나 시인성 부족 | ✅ **6색 + 시인성** — Red·Green·Blue·Yellow·Orange·Pink, 굵기 15 기본 |
+| 단축키 / Shortcuts | Ctrl+1~4 만 | ✅ **9개** — 정적·라이브 줌, 그리기, 휴식 타이머, 녹화, 캡처, 데모타입, 파노라마, OCR |
+| 한국어 설치 가이드 | 없음 | ✅ **양국어 README + about 페이지** |
 
 ---
 
@@ -66,8 +78,6 @@ cd installer
 ```
 
 ### What gets installed / 설치 결과
-
-![Installation layout](screenshots/02-install-folder.png)
 
 | Path | Purpose |
 |------|---------|
@@ -122,11 +132,25 @@ cd installer
 | Install path | `%LOCALAPPDATA%\FLOW-ZoomIt\` |
 | Default font | **나눔바른펜 Bold** (Nanum Barun Pen Bold) — Hangul charset, antialiased |
 | Pen width | **15** — arrowhead width tuned for visibility |
-| Pen color | Red (changeable in Options) |
+| Pen color | Red (changeable in Options — 6색 자유 선택) |
 | Autostart | Registered in Windows Startup |
 | Admin rights | Not required (per-user install) |
 
-![ZoomIt arrows with bigger heads](screenshots/03-draw-arrows.png)
+---
+
+## 🌈 Color & font freedom / 색상·폰트 자유도
+
+![Multi-color annotations on a website — yellow box, pink/orange labels, green arrows](screenshots/02-multi-color-annotations.png)
+
+> **여러 색상을 동시에** — Y(노랑) 박스, P(핑크) 라벨, G(초록) 화살표를 한 화면에서 자유롭게 사용. 강의·발표·시연·튜토리얼 어디서든 강조 포인트가 명확해집니다.
+>
+> **Mix multiple colors at once** — Y (yellow) box, P (pink) labels, G (green) arrows on the same screen. Strong emphasis for lectures, demos, walkthroughs, and tutorials.
+
+![Pink/magenta circle highlighting code in dual terminals](screenshots/03-pink-circle-on-code.png)
+
+> **핑크 컬러 같은 원하는 색상을** — 코드·터미널 위에서도 핑크 같은 강조 색이 잘 보이고, 빠른 키 한 번(`P`)으로 즉시 전환됩니다.
+>
+> **Pick the color you want** — Even on dark code or terminal screens, vivid hues like pink stand out. Single-key swap with `P` (and `R G B Y O` for the rest).
 
 ---
 
@@ -134,7 +158,9 @@ cd installer
 
 `Ctrl+2` → `T` → click on canvas → press `한/영` → type Korean → `Enter`
 
-![Korean handwriting on slide](screenshots/04-korean-text.png)
+> **이젠 한글로 자유롭게** — v11.0 부터 한국어 텍스트 입력이 정상 작동합니다. 손글씨 폰트(나눔바른펜 Bold)가 기본 적용되어 강의 분위기에 자연스럽게 녹아듭니다. 폰트는 트레이 아이콘 → Options → Type 에서 자유롭게 변경할 수 있습니다.
+>
+> **Korean text now works** — v11.0 fixes the legacy Hangul rendering issue. A handwriting font (Nanum Barun Pen Bold) is preset for a friendly classroom tone. Change it any time via tray icon → Options → Type.
 
 > **IME caveat:** The Windows IME composition window may appear in the top-left corner because ZoomIt does not anchor it to the cursor. Input itself works fine. To hide: Settings → Time & Language → Korean → Microsoft IME → Options → Appearance.
 >
