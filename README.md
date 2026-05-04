@@ -18,7 +18,15 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 **손글씨 폰트**·**원하는 색상(빨강·초록·파랑·노랑·주황·핑크 등)**·
 강조된 화살표·자동 시작·양국어 UX를 한 번에.
 
-![FLOW ZoomIt — handwriting font + magenta annotation on a coding screen](screenshots/01-hero-handwriting-pink.png)
+![FLOW ZoomIt — pink box + yellow handwritten message on the FLOW: AX 디자인연구소 site](screenshots/01-hero-flow-site-personal-message.png)
+
+> 💬 **창작자의 진심 / From the creator**
+>
+> 🇰🇷 *"기존 줌잇은 한글 입력이 안되었죠? FLOW ZOOMIT 은 가능합니다. 기다림과 불편함에 제가 직접 만들었어요. 마음껏 편하게 사용하세요~"*
+>
+> 🇬🇧 *"The original ZoomIt couldn't type Korean. FLOW ZoomIt can. I built it myself, frustrated by the wait. Please use it freely."*
+>
+> — **임정훈 소장 · Junghoon Lim**, Director · AI Coordinator, FLOW: AX 디자인연구소
 
 🌐 Live demo · 라이브 데모: <https://flowdesign.ai.kr>
 
@@ -143,13 +151,13 @@ cd installer
 
 ## 🌈 Color & font freedom / 색상·폰트 자유도
 
-![Multi-color annotations on a website — yellow box, pink/orange labels, green arrows](screenshots/02-multi-color-annotations.png)
+![Multi-color annotations on a website — yellow box, pink/orange labels, green arrows](screenshots/03-multi-color-website.png)
 
 > **여러 색상을 동시에** — Y(노랑) 박스, P(핑크) 라벨, G(초록) 화살표를 한 화면에서 자유롭게 사용. 강의·발표·시연·튜토리얼 어디서든 강조 포인트가 명확해집니다.
 >
 > **Mix multiple colors at once** — Y (yellow) box, P (pink) labels, G (green) arrows on the same screen. Strong emphasis for lectures, demos, walkthroughs, and tutorials.
 
-![Pink/magenta circle highlighting code in dual terminals](screenshots/03-pink-circle-on-code.png)
+![Pink/magenta circle highlighting code in dual terminals](screenshots/04-pink-circle-on-code.png)
 
 > **핑크 컬러 같은 원하는 색상을** — 코드·터미널 위에서도 핑크 같은 강조 색이 잘 보이고, 빠른 키 한 번(`P`)으로 즉시 전환됩니다.
 >
