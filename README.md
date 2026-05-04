@@ -106,7 +106,10 @@ cd installer
 | `Tab+Drag` | Ellipse / 타원 |
 | `Wheel` | Adjust pen width / 펜 굵기 |
 | `T` | Text mode / 텍스트 모드 |
-| `Ctrl+Z` | Undo |
+| **`B`** | ⚠️ **Blank black canvas (전체 덮어쓰기)** — `Ctrl+Z` 로 취소 |
+| **`W`** | ⚠️ **Blank white canvas (전체 덮어쓰기)** — `Ctrl+Z` 로 취소 |
+| `E` | Erase all drawings / 모든 그림 지우기 |
+| `Ctrl+Z` | **Undo** (B/W 덮어쓰기 취소 포함) |
 | `ESC` | Exit / 종료 |
 
 ---
@@ -136,6 +139,19 @@ cd installer
 > **IME caveat:** The Windows IME composition window may appear in the top-left corner because ZoomIt does not anchor it to the cursor. Input itself works fine. To hide: Settings → Time & Language → Korean → Microsoft IME → Options → Appearance.
 >
 > **IME 주의:** ZoomIt이 IME 위치를 커서에 고정하지 않아 좌상단에 후보창이 뜰 수 있습니다. 입력 자체에는 영향 없음.
+
+---
+
+## ⚠️ `B`/`W` 캔버스 덮어쓰기 주의 / Canvas-blank gotcha
+
+![Safe workflow for Korean input](screenshots/06-korean-safe-workflow.png)
+
+> 🇰🇷 **그리기 모드(Ctrl+2)에서 `T` 를 누르기 전**에 한/영을 한국어로 바꾸고 자모를 입력하면, 첫 키가 `b`(=ㅠ) 또는 `w`(=ㅈ) 일 때 화면이 통째로 검정·흰색으로 덮입니다 — 이는 ZoomIt 그리기 모드의 단독 단축키 동작입니다. 두벌식에서 ㅈ(자/저/주/지)·ㅠ가 흔하기 때문에 강의 중 사고가 잦습니다.
+>
+> ✅ **안전 순서:** `Ctrl+2` → **`T` 먼저** → 캔버스 클릭 → `한/영` → 한글 입력
+> 🆘 **사고 시 복구:** `Ctrl+Z` 한 번 — 캔버스 덮어쓰기 즉시 취소
+>
+> 🇬🇧 In Draw mode, pressing standalone `B`/`W` blanks the canvas to black/white. If you toggle Korean IME **before** pressing `T`, your first Hangul keystroke can trigger this (ㅈ=`w`, ㅠ=`b`). Always press **`T` first**, click the canvas, then switch IME. Recovery: **`Ctrl+Z`** (one undo).
 
 ---
 

@@ -176,6 +176,39 @@
   body.ko-only .en { display: none; }
   body.ko-only .en-line { display: none; }
 
+  /* B/W Safety card — canvas-blank gotcha */
+  .safety-card {
+    background: #fff8e6;
+    border-left: 4px solid #d97706;
+    border-radius: 0 10px 10px 0;
+    padding: 18px 22px;
+    margin-top: 14px;
+    font-size: 14.5px;
+  }
+  .safety-card .safety-headline {
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .safety-card .safety-rule,
+  .safety-card .safety-recovery {
+    margin-top: 10px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .safety-card code {
+    background: #fef3c7;
+    color: #78350f;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: ui-monospace, 'Consolas', monospace;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .safety-card strong { color: #92400e; }
+  .safety-card .safety-recovery code { background: #d1fae5; color: #065f46; }
+
   @media (max-width: 720px) {
     body { padding: 24px 12px; }
     .wrap { padding: 32px 24px; }
@@ -320,7 +353,10 @@
     <b>Tab+Drag</b><span><span class="ko">타원</span><span class="en">Ellipse</span></span>
     <b>Wheel</b><span><span class="ko">펜 굵기 조절</span><span class="en">Adjust pen width</span></span>
     <b>T</b><span><span class="ko">텍스트 모드</span><span class="en">Text input mode</span></span>
-    <b>Ctrl+Z</b><span><span class="ko">되돌리기</span><span class="en">Undo</span></span>
+    <b style="background:#fff8e6;color:#92400e;">B</b><span><span class="ko">⚠️ 검정 캔버스 덮어쓰기 — Ctrl+Z 로 취소</span><span class="en">⚠️ Blank black canvas — Ctrl+Z to undo</span></span>
+    <b style="background:#fff8e6;color:#92400e;">W</b><span><span class="ko">⚠️ 흰 캔버스 덮어쓰기 — Ctrl+Z 로 취소</span><span class="en">⚠️ Blank white canvas — Ctrl+Z to undo</span></span>
+    <b>E</b><span><span class="ko">모든 그림 지우기</span><span class="en">Erase all drawings</span></span>
+    <b>Ctrl+Z</b><span><span class="ko">되돌리기 (B/W 덮어쓰기 취소 포함)</span><span class="en">Undo (also reverts B/W blank)</span></span>
     <b>ESC</b><span><span class="ko">그리기 종료</span><span class="en">Exit draw mode</span></span>
   </div>
 
@@ -357,7 +393,30 @@
     <li><strong>Demo Type</strong> — <span class="ko">자동 타이핑 텍스트, 속도, user-driven 모드</span><span class="en"> auto-type file, speed, user-driven mode</span></li>
   </ul>
 
-  <h2><span class="ko">한글 입력 시 주의</span><span class="en">Korean IME caveats</span></h2>
+  <h2><span class="ko">⚠️ 'B'/'W' 키 — 캔버스 덮어쓰기 주의</span><span class="en">⚠️ 'B'/'W' Canvas-blank Gotcha</span></h2>
+  <figure>
+    <img src="screenshots/06-korean-safe-workflow.png" alt="Safe workflow for Korean input — Ctrl+2 → T → click → 한/영 → type">
+    <figcaption>
+      <span class="ko">한글 입력 사고 예방 워크플로우 — T를 먼저 누른 뒤 한/영 전환.</span>
+      <span class="en">Safe workflow for Korean input — press T before toggling Korean IME.</span>
+    </figcaption>
+  </figure>
+  <div class="safety-card">
+    <p class="safety-headline">
+      <span class="ko">그리기 모드(Ctrl+2)에서 <strong>T를 누르기 전</strong>에 한국어 IME로 바꾸면, 첫 자모 ㅈ(=<code>w</code>) 또는 ㅠ(=<code>b</code>)가 캔버스 전체를 검정·흰색으로 덮어버립니다 — ZoomIt 의 단독 단축키 동작입니다.</span>
+      <span class="en">In Draw mode (Ctrl+2), pressing standalone <code>B</code>/<code>W</code> blanks the canvas. If Korean IME is on <strong>before</strong> pressing <code>T</code>, your first Hangul keystroke (ㅈ=<code>w</code> / ㅠ=<code>b</code>) will trigger this.</span>
+    </p>
+    <p class="safety-rule">
+      <strong>✅ <span class="ko">안전 순서</span><span class="en">Safe order</span>:</strong>
+      <code>Ctrl+2</code> → <code>T</code> → <span class="ko">캔버스 클릭</span><span class="en">click canvas</span> → <code>한/영</code> → <span class="ko">한글 입력</span><span class="en">type Korean</span>
+    </p>
+    <p class="safety-recovery">
+      <strong>🆘 <span class="ko">사고 시 복구</span><span class="en">Recovery</span>:</strong>
+      <code>Ctrl+Z</code> <span class="ko">한 번 — 캔버스 덮어쓰기 즉시 취소</span><span class="en">— immediately undoes the canvas blank</span>
+    </p>
+  </div>
+
+  <h2><span class="ko">한글 입력 시 IME 후보창 위치</span><span class="en">Korean IME caveats</span></h2>
   <ul>
     <li><span class="ko">Windows IME 후보창이 좌측 상단에 뜰 수 있음 — ZoomIt이 IME 위치를 캔버스 커서로 고정하지 못하는 한계.</span><span class="en">The Windows IME composition window may appear in the top-left because ZoomIt does not anchor the IME to the cursor.</span></li>
     <li><span class="ko">한글 입력 자체에는 영향 없음. 거슬리시면 설정 → 시간 및 언어 → 한국어 → Microsoft IME → 옵션 → 모양 에서 후보창 숨김 가능.</span><span class="en">Input itself works fine. To hide the floating window: Settings → Time & Language → Korean → Microsoft IME → Options → Appearance.</span></li>
