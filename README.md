@@ -223,7 +223,8 @@ Issues and PRs welcome. The packaging is intentionally minimal — most "improve
 ## 📬 Author / 제작
 
 **FLOW: AX Design Lab — FLOW: AX 디자인연구소**
-by **Junghoon Lim · 임정훈** · Director · AI Coordinator (AI 코디네이터)
+Director · AI Coordinator (AI 코디네이터)
+by **Demian Yim** ·
 🌐 <https://flowdesign.ai.kr>
 
 © 2026 FLOW: AX 디자인연구소 · FLOW: AX Design Lab — All Rights Reserved.
