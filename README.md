@@ -44,27 +44,53 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 
 ---
 
-## ✨ Why this exists / 왜 만들었나
+## 📖 만든 이의 이야기 / Maker's note
 
-ZoomIt is a battle-tested screen-annotation tool from Microsoft Sysinternals, but its older v4.52 build could not render Korean characters. We tried five Electron-based "ZoomIt-Pro" rewrites with custom IMEs — all failed due to transparent-window/Korean-IME incompatibility.
+### 🇰🇷 한글이 안 되는 ZoomIt — 그래서 직접 만들었습니다
 
-In May 2026 we verified that **ZoomIt v11.0** handles Korean correctly out of the box, and pivoted from "rewrite" to **"package v11.0 for Korean classroom use."** This installer ships the v11.0 binary plus opinionated defaults so Korean trainers can install once and teach.
+오늘은 여러분께 도움이 될지도 모를 작은 앱 하나를 전해드립니다.
 
-ZoomIt은 Microsoft Sysinternals의 검증된 화면 강조 도구지만 구버전(v4.52)은 한글이 렌더링되지 않았습니다. Electron 기반 자체 IME 시도 5번 모두 실패한 뒤, **v11.0이 한글을 정상 처리**함을 확인하고 "재개발 대신 한국어 강의 환경에 맞게 패키징"으로 방향을 전환했습니다.
+반갑습니다. **FLOW: AX 디자인연구소** 임정훈 소장입니다. 오랜만에 글을 쓰네요. 온·오프라인 강의·워크샵에서 PC 화면의 중요한 부분을 강조할 때, Microsoft 의 **ZoomIt** 을 많이들 쓰시죠? 확대·네모·원·문자 입력 같은 강력한 기능이 있지만 영문만 가능하고 **한글이 입력되지 않아서** 항상 아쉬움이 많았습니다.
+
+"언젠가 되겠지" 하는 기다림과 "여전히 안 되네" 하는 불편함에, 한글 기능과 손글씨 폰트, 다양한 색상까지 더한 **FLOW ZoomIt** 을 바이브 코딩으로 직접 만들었어요.
+
+### 🛠️ 그 뒤에 숨은 기술 여정
+
+처음엔 ZoomIt 을 처음부터 다시 짜려 했습니다. **자체 IME 를 가진 Electron 기반 "ZoomIt-Pro" 빌드를 5번 시도했지만**, 투명 윈도우와 한국어 IME 의 비양립으로 모두 실패했어요. 그러다 2026년 5월, **ZoomIt v11.0 이 한국어를 정상 지원**한다는 사실을 확인하고 "재개발 대신, **v11.0 을 한국어 강의 환경에 맞게 패키징**" 하는 방향으로 전환했습니다. 본체 갱신 + 손글씨 폰트 + 화살표 시인성 + 자동 시작까지 한 번에 세팅됩니다.
+
+### 🌱 AI 코디네이터로 독립한 지 두 달
+
+AI 대전환의 시대, 사람과 일의 흐름을 연결하고 조직의 성장과 성과를 지원한다는 AX 에 대한 사명과 소명을 가지고, **AI 코디네이터** 로 지난 3월 1일에 프리랜서로 독립했습니다. 어느새 두 달이 넘었네요.
+
+퇴사 전부터 치열하게 고민했던 부분들이 — 일부는 성과로, 일부는 숙제로, 일부는 압박으로 — 다가와, 눈을 떠도 눈을 감아도 AI·AX 로 몸과 맘이 한가득입니다. 으으, 프리랜서의 삶이란 이런 것이군요. 선배님들, 존경합니다... ㅠㅠ
+
+### 🧪 200 개 넘게 만들었고, 미완성도 그만큼
+
+2024년부터 혼자서 하나둘 만들기 시작한 게 어느새 **200개**가 넘어갑니다 — 프롬프트 카드, 다양한 디자인의 홈페이지·슬라이드 앱, 워크샵 앱, 고객분석 앱, AX 앱, 캐릭터 앱, 회의 퍼실리테이션 앱, 강의 운영 앱, 패들렛/슬라이도/멘티미터 통합 앱, 팀 빌딩 앱… 등등.
+
+기술력이 부족해서, 욕심을 너무 많이 넣어서, 완성도는 높은데 효용성이 떨어져서, 디자인이 너무 후져서, 트리거가 작동하지 않아서… **완성된 것보다 미완성된 것이 더 많고**, 강의 전일·당일 오작동되는 앱들로 날을 새기도 합니다. 그 가운데 **FLOW ZoomIt 은 살아남은 몇 안 되는 앱** 입니다.
+
+### 💌 그래서 이제 하나둘 풀어냅니다
+
+그동안의 고민과 노력 중 **사람들이 쓸 만한 것들** 을 하나둘 풀어내려 합니다. 이미 많은 분들이 많은 것들을 만들고 계시고, 과거의 고민이 요즘은 기본 기능으로 수월하게 동작하기도 합니다. 하지만 몸과 맘으로 고민하고 고생했던 부분들이 **지금의 AI 를 이해하고 전하는 데** 큰 도움이 되고 있어서, 이 이야기들을 같이 나누고 싶어요.
+
+편하게 다운로드해 사용해 주시고, 개선이 필요한 부분은 말씀해 주세요. 항상 많이 배우고 느끼며 앞으로 나아갑니다. **고맙습니다.**
+
+— *임정훈 소장 · FLOW: AX 디자인연구소*
 
 ---
 
-## 📖 만든 이의 이야기 / Maker's note
+### 🇬🇧 The story behind FLOW ZoomIt
 
-> 오늘은 여러분께 도움이 될지도 모를 작은 앱 하나를 전해드리려 합니다.
->
-> 반갑습니다. **FLOW: AX 디자인연구소** 임정훈 소장입니다. 온·오프라인 강의·워크샵에서 PC 화면의 중요한 부분을 강조할 때 Microsoft 의 **ZoomIt** 을 많이들 쓰시죠? 확대·네모·원·문자 입력 같은 강력한 기능이 있지만 영문만 가능하고 **한글이 입력되지 않아서** 항상 아쉬움이 많았습니다.
->
-> "언젠가 되겠지" 하는 기다림과 "여전히 안 되네" 하는 불편함에, 한글 기능과 손글씨 폰트, 다양한 색상까지 더한 **FLOW ZoomIt**을 바이브 코딩으로 직접 만들었어요. 편하게 다운로드해 사용하시고, 개선이 필요한 부분은 말씀해 주세요.
->
-> 🇬🇧 *Today I'm sharing a small app that might be useful for you. After years of "it'll come someday" turning into "still doesn't work," I vibe-coded a Korean-friendly distribution of Microsoft ZoomIt — native Hangul input, handwriting fonts, fuller color palette. Use it freely.*
+Hi, I'm **Junghoon Lim**, Director of **FLOW: AX Design Lab**. When you emphasize parts of your screen during lectures and workshops, you've probably reached for Microsoft's **ZoomIt** — but the older build couldn't render Korean text, and many trainers (myself included) were frustrated for years.
 
-📜 **전체 후기 / Full retrospective:** [STORY.md](STORY.md) — 독립한 두 달, 200개 넘게 만든 앱들, 그래서 이제 하나둘 풀어내는 이유. *(Two months independent, 200+ apps before this one, why I'm sharing them now.)*
+I first tried rebuilding ZoomIt from scratch — **five Electron-based "ZoomIt-Pro" prototypes with custom Korean IMEs, all failed** because transparent Chromium windows are incompatible with Hangul composition. In May 2026, I confirmed that ZoomIt **v11.0** finally handles Korean correctly out of the box, so I pivoted from "rewrite" to **"package v11.0 for Korean classroom use"** — adding handwriting fonts, larger arrowheads, autostart, and a six-color pen palette.
+
+This is also one of my first releases since I went independent on **March 1, 2026** as an AI Coordinator. Since 2024 I've built **200+ small tools alone** — prompt cards, workshop apps, customer-research dashboards, AX task-rebuilders, character-merch generators, facilitation supports, lecture-logistics tools, all-in-one Padlet/Slido/Mentimeter clones, persona-driven team-building apps. Most are unfinished — for every reason imaginable. **FLOW ZoomIt is one of the few that survived.** I'm going to release the others one by one.
+
+Use it freely. Tell me what should improve. Thank you for being here.
+
+📜 **Full retrospective:** [STORY.md](STORY.md)
 
 ---
 

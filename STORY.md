@@ -21,6 +21,18 @@
 
 ---
 
+## 🛠️ 그 뒤에 숨은 기술 여정 / The technical journey behind it
+
+처음엔 ZoomIt 을 처음부터 다시 짜려 했습니다.
+
+자체 IME 를 가진 **Electron 기반 "ZoomIt-Pro" 빌드를 5번 시도**했지만, 투명 윈도우와 한국어 IME 의 비양립으로 모두 실패했어요. Chromium 의 transparent BrowserWindow 와 한국어 composition 이벤트는 알려진 비호환이고, 같은 변수에서 6번째 시도해도 6번째 실패가 될 가능성이 매우 높았습니다.
+
+그러다 2026년 5월, **ZoomIt v11.0 이 한국어를 정상 지원**한다는 사실을 확인하고 — "재개발 대신, **v11.0 을 한국어 강의 환경에 맞게 패키징**" 하는 방향으로 전환했습니다. 본체 갱신 + 손글씨 폰트(나눔바른펜 Bold) + 화살표 시인성(펜 굵기 15) + 자동 시작 + 6색 펜 팔레트 + 양국어 README/about 페이지까지, 한국어 강의자가 한 번에 세팅하고 강의에 들어갈 수 있도록 담았습니다.
+
+> 🇬🇧 **The journey** — I first tried rebuilding ZoomIt from scratch. **Five Electron prototypes with custom Korean IMEs, all failed** — transparent Chromium windows are simply incompatible with Hangul composition events. A sixth attempt would almost certainly fail the same way. So when ZoomIt v11.0 turned out to handle Korean correctly out of the box, I pivoted from "rewrite" to "package v11.0 for Korean classroom use" — adding Nanum Barun Pen Bold as the default handwriting font, pen width 15 for arrowhead visibility, autostart, the six-color palette (R/G/B/Y/O/P), and a bilingual landing page.
+
+---
+
 ## 2. AI 코디네이터로 독립한 지 두 달
 
 AI 대전환의 시대, **사람과 일의 흐름을 연결하고 조직의 성장과 성과를 지원한다**는 AX 에 대한 사명과 소명을 가지고, **AI 코디네이터**로서 지난 3월 1일에 프리랜서로 독립했습니다. 어느새 두 달이 넘었네요.
