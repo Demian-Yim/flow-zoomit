@@ -94,13 +94,26 @@ Use it freely. Tell me what should improve. Thank you for being here.
 
 ---
 
-## 🚀 Install / 설치
+## 📦 Quick install — 3 clicks / 3번 클릭이면 끝
 
-### Option A — Online installer (recommended) / 온라인 설치 (권장)
+> **개발 도구 없이도 바로 설치 가능 / No git, no terminal needed.**
+
+1. **Download** — [⬇️ FLOW-ZoomIt-Online-v1.0.5.zip (2.5 MB)](https://github.com/Demian-Yim/flow-zoomit/releases/download/v1.0.5/FLOW-ZoomIt-Online-v1.0.5.zip)
+2. **Unzip** the file (right-click → Extract All / 압축 풀기)
+3. **Double-click** `installer\Install-Online.bat`
+   - 설치 프로그램이 Microsoft 에서 ZoomIt v11.0 을 자동으로 받아서 설치합니다.
+   - 관리자 권한 불필요 / No admin rights required.
+   - 설치 후 **Win+Z** 로 메뉴 확인, 또는 **Ctrl+2 → T** 로 한글 입력 테스트.
+
+[📥 모든 다운로드 / All downloads](https://github.com/Demian-Yim/flow-zoomit/releases/latest)
+
+---
+
+## 🚀 Install (advanced) / 설치 (개발자용)
+
+### Option A — Online installer / 온라인 설치 (Microsoft 에서 본체 자동 다운로드)
 
 Downloads ZoomIt v11.0 from Microsoft at install time. No binary in this repo. Smallest, license-safest.
-
-설치 시점에 Microsoft 에서 ZoomIt 본체를 다운로드. 본 저장소에 바이너리 없음. 가장 작고 라이선스 안전.
 
 ```powershell
 # 1. Clone or download this repo
