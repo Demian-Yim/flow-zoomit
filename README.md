@@ -66,9 +66,9 @@ AI 대전환의 시대, 사람과 일의 흐름을 연결하고 조직의 성장
 
 ### 🧪 200 개 넘게 만들었고, 미완성도 그만큼
 
-2024년부터 혼자서 하나둘 만들기 시작한 게 어느새 **200개**가 넘어갑니다 — 프롬프트 카드, 다양한 디자인의 홈페이지·슬라이드 앱, 워크샵 앱, 고객분석 앱, AX 앱, 캐릭터 앱, 회의 퍼실리테이션 앱, 강의 운영 앱, 패들렛/슬라이도/멘티미터 통합 앱, 팀 빌딩 앱… 등등.
+2024년부터 혼자서 하나둘 만들기 시작한 게 어느새 **200개**가 넘어갑니다 — 프롬프트 카드, 다양한 디자인의 홈페이지·슬라이드 앱, 워크샵 앱, 고객분석 앱, AX 앱, 캐릭터 앱, 회의 퍼실리테이션 앱, 강의 운영 앱, 패들렛/슬라이도/멘티미터 통합 앱, 팀 빌딩 앱, **청각장애인을 위한 영상·음성 모드 안내 앱**(주위 소리·입술 모양·뒤에서 다가오는 차량을 거리와 함께 화면에 텍스트·아이콘·영상으로 안내), **음성으로 화면을 터치하는 접근성 앱**(화면 터치·마우스 조작이 어려운 분을 위한 음성 기반 화면 조작), **가족·장애인 위치 공유 안내 앱**(서로의 위치를 확인하고 안전한 안내를 주고받는 도구)… 등등.
 
-기술력이 부족해서, 욕심을 너무 많이 넣어서, 완성도는 높은데 효용성이 떨어져서, 디자인이 너무 후져서, 트리거가 작동하지 않아서… **완성된 것보다 미완성된 것이 더 많고**, 강의 전일·당일 오작동되는 앱들로 날을 새기도 합니다. 그 가운데 **FLOW ZoomIt 은 살아남은 몇 안 되는 앱** 입니다.
+기술력이 부족해서, 욕심을 너무 많이 넣어서, 완성도는 높은데 효용성이 떨어져서, 디자인이 너무 후져서, 트리거가 작동하지 않아서… **완성된 것보다 미완성된 것이 더 많고**, 강의 전일·당일 오작동되는 앱들로 날을 새기도 합니다.
 
 ### 💌 그래서 이제 하나둘 풀어냅니다
 
@@ -86,7 +86,7 @@ Hi, I'm **Junghoon Lim**, Director of **FLOW: AX Design Lab**. When you emphasiz
 
 I first tried rebuilding ZoomIt from scratch — **five Electron-based "ZoomIt-Pro" prototypes with custom Korean IMEs, all failed** because transparent Chromium windows are incompatible with Hangul composition. In May 2026, I confirmed that ZoomIt **v11.0** finally handles Korean correctly out of the box, so I pivoted from "rewrite" to **"package v11.0 for Korean classroom use"** — adding handwriting fonts, larger arrowheads, autostart, and a six-color pen palette.
 
-This is also one of my first releases since I went independent on **March 1, 2026** as an AI Coordinator. Since 2024 I've built **200+ small tools alone** — prompt cards, workshop apps, customer-research dashboards, AX task-rebuilders, character-merch generators, facilitation supports, lecture-logistics tools, all-in-one Padlet/Slido/Mentimeter clones, persona-driven team-building apps. Most are unfinished — for every reason imaginable. **FLOW ZoomIt is one of the few that survived.** I'm going to release the others one by one.
+This is also one of my first releases since I went independent on **March 1, 2026** as an AI Coordinator. Since 2024 I've built **200+ small tools alone** — prompt cards, workshop apps, customer-research dashboards, AX task-rebuilders, character-merch generators, facilitation supports, lecture-logistics tools, all-in-one Padlet/Slido/Mentimeter clones, persona-driven team-building apps, **an accessibility app for the deaf and hard-of-hearing** that surfaces ambient sounds, lip-reading cues, and approaching vehicles (with distance) as on-screen text/icons/video, **a voice-driven screen-touch app** for users who can't operate touchscreens or a mouse, and **a location-sharing companion app** for families caring for someone with a disability. Most are unfinished — for every reason imaginable. I'm going to release the ones that survived, one by one.
 
 Use it freely. Tell me what should improve. Thank you for being here.
 
