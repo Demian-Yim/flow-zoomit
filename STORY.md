@@ -1,6 +1,6 @@
 # 📖 FLOW ZoomIt — 만든 이의 이야기 / The Maker's Story
 
-> **임정훈 소장 · Junghoon Lim** · Director · AI Coordinator
+> **임정훈 소장 · Demin Yim** (Yim Jeonghun) · Director · AI Coordinator
 > FLOW: AX 디자인연구소 · FLOW: AX Design Lab · <https://flowdesign.ai.kr>
 
 ---
