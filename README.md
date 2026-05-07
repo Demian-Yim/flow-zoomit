@@ -26,7 +26,6 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 >
 > 🇬🇧 *"The original ZoomIt couldn't type Korean. FLOW ZoomIt can. I built it myself, frustrated by the wait. Please use it freely."*
 >
-> — **임정훈 소장 · Demin Yim** (Yim Jeonghun), Director · AI Coordinator, FLOW: AX 디자인연구소
 
 ---
 
@@ -74,7 +73,6 @@ AI 대전환의 시대, 사람과 일의 흐름을 연결하고 조직의 성장
 
 편하게 다운로드해 사용해 주시고, 개선이 필요한 부분은 말씀해 주세요. 항상 많이 배우고 느끼며 앞으로 나아갑니다. **고맙습니다.**
 
-— *임정훈 소장 · FLOW: AX 디자인연구소*
 
 ---
 
