@@ -28,8 +28,6 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 >
 > — **임정훈 소장 · Demin Yim** (Yim Jeonghun), Director · AI Coordinator, FLOW: AX 디자인연구소
 
-🌐 Live demo · 라이브 데모: <https://flowdesign.ai.kr>
-
 ---
 
 ## 🎨 What's new in v11 / v11.0 의 차이
