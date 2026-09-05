@@ -1,7 +1,7 @@
 #requires -Version 5.1
 <#
 .SYNOPSIS
-  FLOW: AX 디자인연구소 — ZoomIt v11.0 온라인 설치 스크립트
+  FLOW : AX디자인연구소 — ZoomIt v11.0 온라인 설치 스크립트
   Online installer that downloads ZoomIt directly from Microsoft Sysinternals Live.
 .DESCRIPTION
   - Microsoft Sysinternals Live 에서 ZoomIt64.exe 직접 다운로드
@@ -20,7 +20,7 @@ function Write-Banner {
     $line = '═' * 64
     Write-Host ''
     Write-Host $line -ForegroundColor Cyan
-    Write-Host '   FLOW: AX 디자인연구소 — ZoomIt 온라인 설치' -ForegroundColor White
+    Write-Host '   FLOW : AX디자인연구소 — ZoomIt 온라인 설치' -ForegroundColor White
     Write-Host '   Online installer · downloads ZoomIt v11.0 from Microsoft' -ForegroundColor Gray
     Write-Host $line -ForegroundColor Cyan
     Write-Host ''
@@ -29,10 +29,10 @@ function Write-Footer {
     $line = '─' * 64
     Write-Host ''
     Write-Host $line -ForegroundColor DarkGray
-    Write-Host '   FLOW: AX 디자인연구소 — FLOW: AX Design Lab' -ForegroundColor White
+    Write-Host '   FLOW : AX디자인연구소' -ForegroundColor White
     Write-Host '   by AI 코디네이터 임정훈 소장' -ForegroundColor Gray
     Write-Host '   🌐 https://flowdesign.ai.kr' -ForegroundColor Cyan
-    Write-Host '   © 2026 FLOW: AX 디자인연구소 All Rights Reserved.' -ForegroundColor DarkGray
+    Write-Host '   © 2026 FLOW : AX디자인연구소 All Rights Reserved.' -ForegroundColor DarkGray
     Write-Host $line -ForegroundColor DarkGray
     Write-Host ''
 }
@@ -137,11 +137,11 @@ function New-Shortcut { param([string]$Path, [string]$Target, [string]$Descripti
 }
 $StartMenuDir = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\FLOW-ZoomIt'
 if (-not (Test-Path $StartMenuDir)) { New-Item -ItemType Directory -Path $StartMenuDir -Force | Out-Null }
-New-Shortcut (Join-Path $StartMenuDir 'FLOW ZoomIt.lnk') $ExePath 'FLOW: AX 디자인연구소 — ZoomIt'
+New-Shortcut (Join-Path $StartMenuDir 'FLOW ZoomIt.lnk') $ExePath 'FLOW : AX디자인연구소 — ZoomIt'
 if (Test-Path $aboutDst) {
     New-Shortcut (Join-Path $StartMenuDir 'FLOW ZoomIt 정보.lnk') $aboutDst '제작 배경·단축키·라이선스'
 }
-New-Shortcut (Join-Path ([Environment]::GetFolderPath('Desktop')) 'FLOW ZoomIt.lnk') $ExePath 'FLOW: AX 디자인연구소 — ZoomIt'
+New-Shortcut (Join-Path ([Environment]::GetFolderPath('Desktop')) 'FLOW ZoomIt.lnk') $ExePath 'FLOW : AX디자인연구소 — ZoomIt'
 if (-not $NoStartup) {
     New-Shortcut (Join-Path ([Environment]::GetFolderPath('Startup')) 'FLOW ZoomIt.lnk') $ExePath 'FLOW ZoomIt 자동 실행'
 }

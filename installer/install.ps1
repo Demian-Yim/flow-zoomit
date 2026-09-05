@@ -1,7 +1,7 @@
-﻿#requires -Version 5.1
+#requires -Version 5.1
 <#
 .SYNOPSIS
-  FLOW: AX디자인연구소 — ZoomIt v11.0 + 나눔바른펜 Bold 기본 설정 설치 스크립트
+  FLOW : AX디자인연구소 — ZoomIt v11.0 + 나눔바른펜 Bold 기본 설정 설치 스크립트
 .DESCRIPTION
   - ZoomIt64.exe (v11.0)을 %LOCALAPPDATA%\FLOW-ZoomIt\ 에 복사
   - 단축키 (Ctrl+1~4) 등록
@@ -27,7 +27,7 @@ function Write-Banner {
     $line = '═' * 64
     Write-Host ''
     Write-Host $line -ForegroundColor Cyan
-    Write-Host '   FLOW: AX디자인연구소 — ZoomIt 설치 도우미' -ForegroundColor White
+    Write-Host '   FLOW : AX디자인연구소 — ZoomIt 설치 도우미' -ForegroundColor White
     Write-Host '   ZoomIt v11.0 + 나눔바른펜 Bold 기본 설정' -ForegroundColor Gray
     Write-Host $line -ForegroundColor Cyan
     Write-Host ''
@@ -37,10 +37,10 @@ function Write-Footer {
     $line = '─' * 64
     Write-Host ''
     Write-Host $line -ForegroundColor DarkGray
-    Write-Host '   FLOW: AX디자인연구소' -ForegroundColor White
+    Write-Host '   FLOW : AX디자인연구소' -ForegroundColor White
     Write-Host '   by AI 코디네이터 임정훈 소장' -ForegroundColor Gray
     Write-Host '   🌐 https://flowdesign.ai.kr' -ForegroundColor Cyan
-    Write-Host '   © 2026 FLOW: AX디자인연구소 All Rights Reserved.' -ForegroundColor DarkGray
+    Write-Host '   © 2026 FLOW : AX디자인연구소 All Rights Reserved.' -ForegroundColor DarkGray
     Write-Host $line -ForegroundColor DarkGray
     Write-Host ''
 }
@@ -232,7 +232,7 @@ if (-not (Test-Path $StartMenuDir)) {
 New-Shortcut `
     -Path        (Join-Path $StartMenuDir 'FLOW ZoomIt.lnk') `
     -Target      $ExePath `
-    -Description 'FLOW: AX디자인연구소 — ZoomIt 화면 도구'
+    -Description 'FLOW : AX디자인연구소 — ZoomIt 화면 도구'
 
 # 시작 메뉴: 정보 / 도움말 (about.html → 기본 브라우저)
 if (Test-Path $AboutDest) {
@@ -247,7 +247,7 @@ $DesktopShortcut = Join-Path ([Environment]::GetFolderPath('Desktop')) 'FLOW Zoo
 New-Shortcut `
     -Path        $DesktopShortcut `
     -Target      $ExePath `
-    -Description 'FLOW: AX디자인연구소 — ZoomIt 화면 도구'
+    -Description 'FLOW : AX디자인연구소 — ZoomIt 화면 도구'
 
 # 시작프로그램 (Windows 부팅 시 자동 실행)
 if (-not $NoStartup) {

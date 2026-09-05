@@ -18,7 +18,7 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 **손글씨 폰트**·**원하는 색상(빨강·초록·파랑·노랑·주황·핑크 등)**·
 강조된 화살표·자동 시작·양국어 UX를 한 번에.
 
-![FLOW ZoomIt — pink box + yellow handwritten message on the FLOW: AX 디자인연구소 site](screenshots/01-hero-flow-site-personal-message.png)
+![FLOW ZoomIt — pink box + yellow handwritten message on the FLOW : AX디자인연구소 site](screenshots/01-hero-flow-site-personal-message.png)
 
 > 💬 **창작자의 진심 / From the creator**
 >
@@ -47,7 +47,7 @@ short_description: Korean-friendly Sysinternals ZoomIt v11.0 distribution
 
 오늘은 여러분께 도움이 될지도 모를 작은 앱 하나를 전해드립니다.
 
-반갑습니다. **FLOW: AX 디자인연구소** 임정훈 소장입니다. 오랜만에 글을 쓰네요. 온·오프라인 강의·워크샵에서 PC 화면의 중요한 부분을 강조할 때, Microsoft 의 **ZoomIt** 을 많이들 쓰시죠? 확대·네모·원·문자 입력 같은 강력한 기능이 있지만 영문만 가능하고 **한글이 입력되지 않아서** 항상 아쉬움이 많았습니다.
+반갑습니다. **FLOW : AX디자인연구소** 임정훈 소장입니다. 오랜만에 글을 쓰네요. 온·오프라인 강의·워크샵에서 PC 화면의 중요한 부분을 강조할 때, Microsoft 의 **ZoomIt** 을 많이들 쓰시죠? 확대·네모·원·문자 입력 같은 강력한 기능이 있지만 영문만 가능하고 **한글이 입력되지 않아서** 항상 아쉬움이 많았습니다.
 
 "언젠가 되겠지" 하는 기다림과 "여전히 안 되네" 하는 불편함에, 한글 기능과 손글씨 폰트, 다양한 색상까지 더한 **FLOW ZoomIt** 을 바이브 코딩으로 직접 만들었어요.
 
@@ -78,7 +78,7 @@ AI 대전환의 시대, 사람과 일의 흐름을 연결하고 조직의 성장
 
 ### 🇬🇧 The story behind FLOW ZoomIt
 
-Hi, I'm **Demin Yim** (Yim Jeonghun), Director of **FLOW: AX Design Lab**. When you emphasize parts of your screen during lectures and workshops, you've probably reached for Microsoft's **ZoomIt** — but the older build couldn't render Korean text, and many trainers (myself included) were frustrated for years.
+Hi, I'm **Demin Yim** (Yim Jeonghun), Director of **FLOW : AX디자인연구소**. When you emphasize parts of your screen during lectures and workshops, you've probably reached for Microsoft's **ZoomIt** — but the older build couldn't render Korean text, and many trainers (myself included) were frustrated for years.
 
 I first tried rebuilding ZoomIt from scratch — **five Electron-based "ZoomIt-Pro" prototypes with custom Korean IMEs, all failed** because transparent Chromium windows are incompatible with Hangul composition. In May 2026, I confirmed that ZoomIt **v11.0** finally handles Korean correctly out of the box, so I pivoted from "rewrite" to **"package v11.0 for Korean classroom use"** — adding handwriting fonts, larger arrowheads, autostart, and a six-color pen palette.
 
@@ -278,9 +278,9 @@ Issues and PRs welcome. The packaging is intentionally minimal — most "improve
 
 ## 📬 Author / 제작
 
-**FLOW: AX Design Lab — FLOW: AX 디자인연구소**
+**FLOW : AX디자인연구소**
 Director · AI Coordinator (AI 코디네이터)
 by **Demian Yim** ·
 🌐 <https://flowdesign.ai.kr>
 
-© 2026 FLOW: AX 디자인연구소 · FLOW: AX Design Lab — All Rights Reserved.
+© 2026 FLOW : AX디자인연구소 — All Rights Reserved.

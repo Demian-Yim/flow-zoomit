@@ -1,7 +1,7 @@
 # 📖 FLOW ZoomIt — 만든 이의 이야기 / The Maker's Story
 
 > **임정훈 소장 · Demin Yim** (Yim Jeonghun) · Director · AI Coordinator
-> FLOW: AX 디자인연구소 · FLOW: AX Design Lab · <https://flowdesign.ai.kr>
+> FLOW : AX디자인연구소 · <https://flowdesign.ai.kr>
 
 ---
 
@@ -9,7 +9,7 @@
 
 오늘은 여러분께 도움이 될지도 모를 작은 앱 하나를 전해드리려 합니다.
 
-반갑습니다. **FLOW: AX 디자인연구소** 임정훈 소장입니다. 오랜만에 다시 글을 쓰네요.
+반갑습니다. **FLOW : AX디자인연구소** 임정훈 소장입니다. 오랜만에 다시 글을 쓰네요.
 
 온·오프라인 강의·워크샵에서 PC 화면의 중요한 부분을 강조할 때, Microsoft 의 **ZoomIt**을 많이들 쓰시죠? 확대·네모·원·문자 입력 같은 강력한 기능이 있지만, 영문만 가능하고 **한글이 입력되지 않아서** 항상 아쉬움이 많았습니다.
 
@@ -100,7 +100,7 @@ AI 대전환의 시대, **사람과 일의 흐름을 연결하고 조직의 성�
 
 ---
 
-© 2026 FLOW: AX 디자인연구소 · FLOW: AX Design Lab — All Rights Reserved.
+© 2026 FLOW : AX디자인연구소 — All Rights Reserved.
 ZoomIt is a trademark of Microsoft Corporation. FLOW ZoomIt is an independent
 distribution that wraps Microsoft Sysinternals ZoomIt v11.0 with FLOW defaults
 and Korean classroom UX. See `LICENSE` for the FLOW packaging license (MIT)

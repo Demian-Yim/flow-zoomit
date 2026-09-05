@@ -1,12 +1,12 @@
 @echo off
 setlocal
 chcp 65001 > nul
-title FLOW: AX디자인연구소 — ZoomIt 설치
+title FLOW : AX디자인연구소 — ZoomIt 설치
 
 echo.
 echo  ╔══════════════════════════════════════════════════════════════╗
 echo  ║                                                              ║
-echo  ║       FLOW: AX디자인연구소 — ZoomIt 화면 도구 설치           ║
+echo  ║       FLOW : AX디자인연구소 — ZoomIt 화면 도구 설치           ║
 echo  ║       v11.0 + 나눔바른펜 Bold 기본 설정                      ║
 echo  ║                                                              ║
 echo  ╚══════════════════════════════════════════════════════════════╝

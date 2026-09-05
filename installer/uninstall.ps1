@@ -1,7 +1,7 @@
-﻿#requires -Version 5.1
+#requires -Version 5.1
 <#
 .SYNOPSIS
-  FLOW: AX디자인연구소 — ZoomIt 제거 스크립트
+  FLOW : AX디자인연구소 — ZoomIt 제거 스크립트
 #>
 
 [CmdletBinding()]
@@ -12,7 +12,7 @@ $ErrorActionPreference = 'SilentlyContinue'
 function Write-Banner {
     Write-Host ''
     Write-Host ('═' * 64) -ForegroundColor Cyan
-    Write-Host '   FLOW: AX디자인연구소 — ZoomIt 제거' -ForegroundColor White
+    Write-Host '   FLOW : AX디자인연구소 — ZoomIt 제거' -ForegroundColor White
     Write-Host ('═' * 64) -ForegroundColor Cyan
     Write-Host ''
 }
@@ -20,10 +20,10 @@ function Write-Banner {
 function Write-Footer {
     Write-Host ''
     Write-Host ('─' * 64) -ForegroundColor DarkGray
-    Write-Host '   FLOW: AX디자인연구소' -ForegroundColor White
+    Write-Host '   FLOW : AX디자인연구소' -ForegroundColor White
     Write-Host '   by AI 코디네이터 임정훈 소장' -ForegroundColor Gray
     Write-Host '   🌐 https://flowdesign.ai.kr' -ForegroundColor Cyan
-    Write-Host '   © 2026 FLOW: AX디자인연구소 All Rights Reserved.' -ForegroundColor DarkGray
+    Write-Host '   © 2026 FLOW : AX디자인연구소 All Rights Reserved.' -ForegroundColor DarkGray
     Write-Host ('─' * 64) -ForegroundColor DarkGray
     Write-Host ''
 }
