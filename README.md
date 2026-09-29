@@ -78,7 +78,7 @@ AI 대전환의 시대, 사람과 일의 흐름을 연결하고 조직의 성장
 
 ### 🇬🇧 The story behind FLOW ZoomIt
 
-Hi, I'm **Demin Yim** (Yim Jeonghun), Director of **FLOW : AX디자인연구소**. When you emphasize parts of your screen during lectures and workshops, you've probably reached for Microsoft's **ZoomIt** — but the older build couldn't render Korean text, and many trainers (myself included) were frustrated for years.
+Hi, I'm **Demian Yim** (Yim Jeonghun), Director of **FLOW : AX디자인연구소**. When you emphasize parts of your screen during lectures and workshops, you've probably reached for Microsoft's **ZoomIt** — but the older build couldn't render Korean text, and many trainers (myself included) were frustrated for years.
 
 I first tried rebuilding ZoomIt from scratch — **five Electron-based "ZoomIt-Pro" prototypes with custom Korean IMEs, all failed** because transparent Chromium windows are incompatible with Hangul composition. In May 2026, I confirmed that ZoomIt **v11.0** finally handles Korean correctly out of the box, so I pivoted from "rewrite" to **"package v11.0 for Korean classroom use"** — adding handwriting fonts, larger arrowheads, autostart, and a six-color pen palette.
 
